@@ -4,11 +4,10 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -pedantic -Wno-strict-prototypes -std=c99 -v
+CFLAGS = -Wall -Wextra -pedantic -Wno-strict-prototypes -std=c99
 
 # Source file
 SRC = main.c pageblock.c
-
 OBJ = $(SRC:.c=.o)
 
 # Executable name
@@ -19,7 +18,7 @@ all: $(EXEC)
 
 # Compile
 $(EXEC): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $<
+	$(CC) $(CFLAGS) -o $@ $^
 
 %.o: %.c pageblock.h
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -27,4 +26,5 @@ $(EXEC): $(OBJ)
 # Clean the generated files
 clean:
 	rm -rf $(EXEC) $(OBJ)
+	rm -rf hello
 
