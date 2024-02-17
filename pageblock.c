@@ -162,7 +162,6 @@ int main(){
             free(data);
         } else if (strcmp(input, "INSERT") == 0) {
             printf("INSERT");
-
         } else {
             printf("~\n");
             break;
@@ -173,21 +172,4 @@ int main(){
     }
     
     return 0;
-    // if (argc < 2) {
-    //     printf("File path not provided");
-    //     exit(0);
-    // }
-
-    // // get file path
-    // char *filepath = argv[1];
-    // int fd = open(filepath, O_RDWR | O_DIRECT);
-    // if (fd == -1) {
-    //     perror("error open file");
-    //     exit(EXIT_FAILURE);
-    // }
-    // unsigned char *fileres = readFD(fd, 2, PAGE_SIZE);
-    // free(fileres);
-    // close(fd);
-
-    // return 0;
 }
