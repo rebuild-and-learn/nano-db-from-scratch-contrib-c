@@ -4,10 +4,10 @@
 CC = gcc
 
 # Compiler flags
-CFLAGS = -Wall -Wextra -pedantic -Wno-strict-prototypes -std=c99
+CFLAGS = -Wall -Wextra -pedantic -Wno-strict-prototypes -std=c99 -v
 
 # Source file
-SRC = pageblock.c
+SRC = main.c pageblock.c
 
 OBJ = $(SRC:.c=.o)
 
