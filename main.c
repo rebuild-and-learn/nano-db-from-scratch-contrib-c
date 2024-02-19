@@ -33,10 +33,12 @@ int main(){
             break;
         }
 
+        // get first word, strtok split based on first delimiter found
         char *command = strtok(input, " ");
         toUpper(command);
+        // get value after command
         char *input_value = strtok(NULL, "\n");
-         
+
         input[strcspn(input, "\n")] = '\0';
 
         if (strcmp(command, "INIT") == 0) {
@@ -52,6 +54,12 @@ int main(){
         } else if (strcmp(input, "INSERT") == 0) {
             printf("INSERT");
             printf("input value: %s", input_value);
+        } else if (strcmp(input, "FROM") == 0) {
+            printf("FROM");
+        } else if (strcmp(input, "UPDATE") == 0) {
+            printf("UPDATE");
+        } else if (strcmp(input, "DELETE") == 0) {
+            printf("DELETE");
         } else {
             printf("~\n");
             break;

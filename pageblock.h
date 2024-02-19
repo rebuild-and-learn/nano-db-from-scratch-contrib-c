@@ -20,10 +20,11 @@ typedef struct Pager {
 
 int main();
 pager newPager(char* blockPath);
-unsigned char* readFD(int fd, off_t, size_t limit);
+unsigned char* readFD(pager *pager, off_t offset, size_t limit);
 void rewrite(pager *pager, off_t offset, unsigned char *data);
 int getLastPgaeStartOffset(pager *pager);
 int initFile(char* filename, char *data);
+void insertRowData(unsigned char *rowData, pager *pager);
 
 
 #endif
